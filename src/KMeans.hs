@@ -1,9 +1,15 @@
 module KMeans
     ( kMeans
+    , Distance(..)
+    , Mean(..)
+    , KMeansError(..)
     )
 where
 
-import Data.List (minimumBy, sortBy, groupBy)
+import           Data.List                      ( minimumBy
+                                                , sortBy
+                                                , groupBy
+                                                )
 
 class Ord a => Distance a where
     dist :: a -> a -> a
